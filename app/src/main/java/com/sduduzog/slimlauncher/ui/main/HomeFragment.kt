@@ -53,9 +53,9 @@ class HomeFragment : BaseFragment(), OnLaunchAppListener {
                 })
             }
         }
-//
+
         setEventListeners()
-        binding!!.homeFragmentOptions.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_optionsFragment))
+
         return binding?.root
     }
 
@@ -78,7 +78,6 @@ class HomeFragment : BaseFragment(), OnLaunchAppListener {
     }
 
     private fun setEventListeners() {
-
         binding!!.homeFragmentTime.setOnClickListener {
             try {
                 val intent = Intent(AlarmClock.ACTION_SHOW_ALARMS)
@@ -123,6 +122,9 @@ class HomeFragment : BaseFragment(), OnLaunchAppListener {
                 // Do nothing
             }
         }
+
+        binding!!.homeFragmentApps.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_openAppFragment))
+        binding!!.homeFragmentOptions.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_optionsFragment))
     }
 
     fun updateClock() {

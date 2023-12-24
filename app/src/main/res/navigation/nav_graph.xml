@@ -11,6 +11,27 @@
         android:label="home_fragment"
         tools:layout="@layout/home_fragment">
         <action
+            android:id="@+id/action_homeFragment_to_openAppFragment"
+            app:destination="@id/openAppFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_optionsFragment"
+            app:destination="@id/optionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/openAppFragment"
+        android:name="com.sduduzog.slimlauncher.ui.options.OpenAppFragment"
+        android:label="open_apps_fragment"
+        tools:layout="@layout/open_apps_fragment">
+        <!--
+        Need to add these actions also to openAppFragment, because
+        when opening an app from it and then returning back home,
+        it seems like we are still in openAppFragment instead of homeFragment.
+        So navigation crashed if not providing these two lines!
+         -->
+        <action
+            android:id="@+id/action_homeFragment_to_openAppFragment"
+            app:destination="@id/openAppFragment" />
+        <action
             android:id="@+id/action_homeFragment_to_optionsFragment"
             app:destination="@id/optionsFragment" />
     </fragment>

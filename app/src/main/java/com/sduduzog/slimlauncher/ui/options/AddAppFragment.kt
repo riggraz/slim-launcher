@@ -23,7 +23,7 @@ import com.sduduzog.slimlauncher.utils.OnAppClickedListener
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class AddAppFragment : BaseFragment(), OnAppClickedListener {
+open class AddAppFragment : BaseFragment(), OnAppClickedListener {
 
     private var _binding: AddAppFragmentBinding? = null
     private val binding get() = _binding
