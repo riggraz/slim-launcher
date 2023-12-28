@@ -20,6 +20,5 @@ class OpenAppFragment : AddAppFragment() {
             }
         } catch (e: Exception) {
         }
-        activity?.supportFragmentManager?.popBackStack();
     }
 }
