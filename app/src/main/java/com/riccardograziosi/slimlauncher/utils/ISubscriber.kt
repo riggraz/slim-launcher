@@ -1,0 +1,3 @@
+package com.riccardograziosi.slimlauncher.utils
+
+interface ISubscriber

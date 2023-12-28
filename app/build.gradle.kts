@@ -8,7 +8,7 @@ plugins {
 android {
     compileSdk = 31
     defaultConfig {
-        applicationId = "com.sduduzog.slimlauncher"
+        applicationId = "com.riccardograziosi.slimlauncher"
         minSdk = 21
         targetSdk = 31
         versionName = "2.4.21"
